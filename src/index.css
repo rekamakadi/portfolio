@@ -35,7 +35,7 @@ p {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #61BAAD, #DE7AFF, #9333ea);
+  background: linear-gradient(90deg, #61baad, #de7aff, #9333ae);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

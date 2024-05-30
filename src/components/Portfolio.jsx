@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 // import project1 from '../assets/project1.png';
 import { AiFillGithub } from 'react-icons/ai';
+import ShinyEffect from './ShinyEffect';
 
 const projects = [
     {
@@ -32,6 +33,10 @@ const Portfolio = () => {
                 <a href="#" className='px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-300'><AiFillGithub/></a>
             </div>
 
+        <div className="hidden md:block">
+          <ShinyEffect left={100} top={0} size={900} />
+        </div>
+       
             {/* <ul className='ml-6 flex flex-row md:flex-col gap-6 flex-wrap justify-center mt-4 md:gap-1'>
                 {projects.map((project, index) => (
                     <li key={index} onClick={() => setCurrentProject(index)} className=''>
