@@ -1,4 +1,5 @@
 import React from "react";
+import cv from "/Réka_Makádi_CV.pdf";
 import profilepic from "../assets/profilepic.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
@@ -21,10 +22,10 @@ const Hero = () => {
         <div className="flex flex-row gap-4 mb-4 md:mb-0">
           <button
             className="transform transition-transform hover:scale-105 hover:shadow-lg
-                z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2
-                bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl"
+            z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2
+            bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl"
           >
-            <a href="/reka-makadi-cv.pdf" id="download" download="Réka_Makádi_CV.pdf">
+            <a href={cv} id="download" download="Réka_Makádi_CV.pdf">
               Download CV
             </a>
           </button>
