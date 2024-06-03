@@ -62,63 +62,6 @@ const iconDetails = {
   SiFigma: { icon: <SiFigma className="text-[#F24E1E]" />, name: "Figma" },
 };
 
-// const Portfolio = () => {
-//   const [projects, setProjects] = useState([]);
-//   const [currentProject, setCurrentProject] = useState(0);
-
-//   useEffect(() => {
-//     setProjects(projectsData);
-//   }, []);
-
-//   if (projects.length === 0) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return (
-//     <div
-//       className="relative max-w-[800px] mx-auto p-6 md:my-20 flex flex-col md:flex-row"
-//       id="portfolio"
-//     >
-//       <div className="glass p-6 w-full border-2 max-w-[600px]">
-//         <div className="w-full h-80">
-//           {/* <img src={projects[currentProject].img} alt={projects[currentProject].title} className='w-full h-full object-cover rounded-lg mb-4' /> */}
-//         </div>
-
-//         <p className="text-gray-200 my-4">Description</p>
-//         <div className="flex space-x-e">
-//           <a
-//             href="#"
-//             className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slatee-700 transition duration-300"
-//           >
-//             View Site
-//           </a>
-//           <a
-//             href="#"
-//             className="px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-300"
-//           >
-//             <AiFillGithub />
-//           </a>
-//         </div>
-
-//         <div className="hidden md:block">
-//           <ShinyEffect left={100} top={0} size={900} />
-//         </div>
-
-//         <ul className='ml-6 flex flex-row md:flex-col gap-6 flex-wrap justify-center mt-4 md:gap-1'>
-//                 {projects.map((project, index) => (
-//                     <li key={index} onClick={() => setCurrentProject(index)} className={`cursor-pointer text-gray-300 bg-slate-700 rounded-lg p-2 max-w-[100px] hover:bg-slate-800 transition duration-300 ${currentProject === index ? "bg-slate-900" : ""}`}>
-//                     {project.title}
-//                     </li>
-//                 ))}
-
-//             </ul>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Portfolio;
-
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
@@ -145,15 +88,18 @@ const Portfolio = () => {
           <div key={index}>
             <div className="glass p-6 border-2 max-w-[600px]">
               <div className="w-full h-80">
-                {/* <img
-                  src={project.img}
-                  alt={project.title}
-                  className="w-full h-full object-cover rounded-lg mb-4"
-                /> */}
+                {project.img && (
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="w-full h-full object-cover rounded-lg mb-4"
+                  />
+                )}
               </div>
 
+              <h2 className="text-xl text-white mb-2">{project.title}</h2>
               <p className="text-gray-200 my-4">{project.description}</p>
-              <div className="md:hidden p-6 flex flex-wrap gap-4 text-4xl justify-center">
+              <div className="p-6 flex flex-wrap gap-4 text-4xl justify-center">
                 {project.techIcons.map((iconName, index) => (
                   <div key={index} className="group relative">
                     <div
