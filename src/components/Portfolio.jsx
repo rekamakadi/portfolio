@@ -86,7 +86,7 @@ const Portfolio = () => {
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index}>
-            <div className="glass p-6 border-2 max-w-[600px]">
+            <div className="glass p-6 border-2 max-w-[600px] mx-auto">
               <div className="w-full h-80">
                 {project.img && (
                   <img
@@ -97,8 +97,8 @@ const Portfolio = () => {
                 )}
               </div>
 
-              <h2 className="text-xl text-white mb-2">{project.title}</h2>
-              <p className="text-gray-200 my-4">{project.description}</p>
+              <h2 className="text-xl text-white mb-2 text-center">{project.title}</h2>
+              <p className="text-gray-200 my-4 text-center">{project.description}</p>
               <div className="p-6 flex flex-wrap gap-4 text-4xl justify-center">
                 {project.techIcons.map((iconName, index) => (
                   <div key={index} className="group relative">
