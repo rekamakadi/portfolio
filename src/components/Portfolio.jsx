@@ -5,7 +5,6 @@ import projectsData from "../assets/projects.json";
 import Slider from "react-slick";
 import { CustomPrevArrow, CustomNextArrow } from "./CustomArrows"; // Import custom arrows
 
-
 import {
   DiJavascript1,
   DiReact,
@@ -86,29 +85,36 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="max-w-[800px] mx-auto p-6 md:my-20" id="portfolio">
+    <div className="max-w-[800px] mx-auto p-6 md:my-20 relative" id="portfolio">
       <Slider {...settings}>
         {projects.map((project, index) => (
-          <div key={index}>
+          <div key={index} className="relative">
             <div className="glass p-6 border-2 max-w-[600px] mx-auto">
-              <div className="w-full h-80">
+              <h2 className="text-4xl text-white mb-2 text-center">
+                {project.experience}
+              </h2>
+              <h4 className="text-xl text-white mb-2 text-center">
+                {project.title}
+              </h4>
+              <div className="w-full h-80 mb-4">
                 {project.img && (
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="w-full h-full object-cover rounded-lg mb-4"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 )}
               </div>
 
-              <h2 className="text-xl text-white mb-2 text-center">{project.title}</h2>
-              <p className="text-gray-200 my-4 text-center">{project.description}</p>
-              <div className="p-6 flex flex-wrap gap-4 text-4xl justify-center">
+              <p className="text-gray-200 my-4 text-center">
+                {project.description}
+              </p>
+              <div className="p-2 flex flex-wrap gap-2 text-2xl justify-center">
                 {project.techIcons.map((iconName, index) => (
                   <div key={index} className="group relative">
                     <div
-                      className="-inset-1 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
-            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4 bg-opacity-50"
+                      className="bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
+            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-3"
                     >
                       {iconDetails[iconName]?.icon}
                     </div>
@@ -121,11 +127,11 @@ const Portfolio = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex space-x-e">
+              <div className="flex space-x-4 justify-center mt-4">
                 {project.links.site && (
                   <a
                     href={project.links.site}
-                    className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slatee-700 transition duration-300"
+                    className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
                   >
                     View Site
                   </a>
@@ -136,6 +142,14 @@ const Portfolio = () => {
                     className="px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-300"
                   >
                     <AiFillGithub />
+                  </a>
+                )}
+                {project.links.figma && (
+                  <a
+                    href={project.links.figma}
+                    className="px-4 py-2 bg-pink-500 text-gray-200 text-2xl rounded-lg hover:bg-pink-600 transition duration-300"
+                  >
+                    <SiFigma />
                   </a>
                 )}
               </div>

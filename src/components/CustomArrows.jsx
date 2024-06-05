@@ -1,48 +1,40 @@
+//
+
 import React from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-const CustomPrevArrow = (props) => {
+export const CustomPrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
+      className={`${className} absolute top-1/2 transform -translate-y-1/2 left-2 z-10`}
       style={{
         ...style,
         display: "block",
-        color: "white",
-        fontSize: "24px",
-        zIndex: 1,
-        left: "-30px",
-        top: "50%",
-        transform: "translateY(-50%)",
+        background: "gray",
+        borderRadius: "50%",
       }}
       onClick={onClick}
     >
-      <FaArrowLeft />
+      <AiOutlineLeft className="text-white" size={30} />
     </div>
   );
 };
 
-const CustomNextArrow = (props) => {
+export const CustomNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
+      className={`${className} absolute top-1/2 transform -translate-y-1/2 right-2 z-10`}
       style={{
         ...style,
         display: "block",
-        color: "white",
-        fontSize: "24px",
-        zIndex: 1,
-        right: "-30px",
-        top: "50%",
-        transform: "translateY(-50%)",
+        background: "gray",
+        borderRadius: "50%",
       }}
       onClick={onClick}
     >
-      <FaArrowRight />
+      <AiOutlineRight className="text-white" size={30} />
     </div>
   );
 };
-
-export { CustomPrevArrow, CustomNextArrow };
