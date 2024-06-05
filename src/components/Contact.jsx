@@ -16,10 +16,10 @@ const Contact = () => {
 
         <li className="flex">
           <a href="https://www.linkedin.com/in/rekamakadi">
-            <AiFillLinkedin className="w-[70px] h-auto text-gray-300" />
+            <AiFillLinkedin className="w-[70px] h-auto text-gray-300 transform transition-transform hover:scale-105 hover:shadow-lg" />
           </a>
           <a href="https://www.github.com/rekamakadi">
-            <AiFillGithub className="w-[70px] h-auto text-gray-300" />
+            <AiFillGithub className="w-[70px] h-auto text-gray-300 transform transition-transform hover:scale-105 hover:shadow-lg" />
           </a>
         </li>
       </ul>
