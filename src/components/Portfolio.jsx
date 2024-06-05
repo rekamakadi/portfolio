@@ -90,6 +90,7 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <div key={index} className="relative">
             <div className="glass p-6 border-2 max-w-[600px] mx-auto">
+              <ShinyEffect left={-50} top={-50} size={200} />
               <h2 className="text-4xl text-white mb-2 text-center">
                 {project.experience}
               </h2>
@@ -126,6 +127,7 @@ const Portfolio = () => {
                     </span>
                   </div>
                 ))}
+                <ShinyEffect right={-50} bottom={-50} size={200} />
               </div>
               <div className="flex space-x-4 justify-center mt-4">
                 {project.links.site && (
