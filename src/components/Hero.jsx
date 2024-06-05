@@ -18,7 +18,7 @@ const Hero = () => {
           />
         </p>
 
-        <div className="flex flex-row gap-4 mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row gap-4 mb-4 md:mb-0">
           <button
             className="transform transition-transform hover:scale-105 hover:shadow-lg
     z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2
@@ -60,7 +60,7 @@ const Hero = () => {
 
       <img
         src="/portfolio/profilepic.png"
-        className="rounded-full"
+        className="rounded-full w-60 h-60 md:w-80 md:h-80 lg:w-100 lg:h-100 mx-auto"
         alt="profilepicture"
       />
     </div>
