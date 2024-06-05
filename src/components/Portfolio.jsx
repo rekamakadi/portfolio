@@ -3,6 +3,8 @@ import { AiFillGithub } from "react-icons/ai";
 import ShinyEffect from "./ShinyEffect";
 import projectsData from "../assets/projects.json";
 import Slider from "react-slick";
+import { CustomPrevArrow, CustomNextArrow } from "./CustomArrows"; // Import custom arrows
+
 
 import {
   DiJavascript1,
@@ -75,10 +77,12 @@ const Portfolio = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
   };
 
   return (
