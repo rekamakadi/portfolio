@@ -1,7 +1,6 @@
 import React from "react";
-import cv from "/Réka_Makádi_CV.pdf";
-import profilepic from "../assets/profilepic.png";
 import { TypeAnimation } from "react-type-animation";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import ShinyEffect from "./ShinyEffect";
 
 const Hero = () => {
@@ -22,13 +21,33 @@ const Hero = () => {
         <div className="flex flex-row gap-4 mb-4 md:mb-0">
           <button
             className="transform transition-transform hover:scale-105 hover:shadow-lg
-            z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2
-            bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl"
+    z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2
+    bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl"
           >
-            <a href={cv} id="download" download="Réka_Makádi_CV.pdf">
+            <a
+              href="/portfolio/Réka_Makádi_CV.pdf"
+              id="download"
+              download="Réka_Makádi_CV.pdf"
+              className="text-2xl"
+            >
               Download CV
             </a>
           </button>
+          <div className="flex w-1/2 mt-6 space-x-4">
+            <a
+              href="https://www.linkedin.com/in/rekamakadi"
+              className="flex items-center justify-center w-full bg-gradient-to-r from-[#0077B5] to-[#00A0DC] rounded-xl transform transition-transform hover:scale-105 hover:shadow-lg z-10"
+            >
+              <AiFillLinkedin className="text-gray-200" size={30} />
+            </a>
+            <a
+              href="https://www.github.com/rekamakadi"
+              className="transform transition-transform hover:scale-105 hover:shadow-lg z-10
+      flex items-center justify-center w-full p-2 bg-gradient-to-r from-[#333333] to-[#6e5494] rounded-xl"
+            >
+              <AiFillGithub className="text-gray-200" size={30} />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -39,7 +58,11 @@ const Hero = () => {
         <ShinyEffect left={-100} top={0} size={1200} />
       </div>
 
-      <img src={profilepic} className="rounded-full" alt="profilepicture" />
+      <img
+        src="/portfolio/profilepic.png"
+        className="rounded-full"
+        alt="profilepicture"
+      />
     </div>
   );
 };
