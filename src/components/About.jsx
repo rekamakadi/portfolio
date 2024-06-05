@@ -48,7 +48,7 @@ const About = () => {
         {iconDetails.map((detail, index) => (
           <div key={index} className="group relative">
             <div
-              className="-inset-1 bg-gradient-to-r from-stone-300 to-stone-900 rounded-full
+              className="-inset-1 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
             bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4 bg-opacity-50"
             >
               {detail.icon}
@@ -68,7 +68,7 @@ const About = () => {
           {iconDetails.map((detail, index) => (
             <div key={index} className="group relative">
               <div
-              className="-inset-1 bg-gradient-to-r from-stone-300 to-stone-900 rounded-full
+              className="-inset-1 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
             bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4 bg-opacity-50"
             >
               {detail.icon}
