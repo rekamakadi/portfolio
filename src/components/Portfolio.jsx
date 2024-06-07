@@ -113,15 +113,12 @@ const Portfolio = () => {
               <div className="p-2 flex flex-wrap gap-2 text-2xl justify-center">
                 {project.techIcons.map((iconName, index) => (
                   <div key={index} className="group relative">
-                    <div
-                      className="bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
-            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-3"
-                    >
+                    <div className="relative p-2 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full shadow-lg flex items-center justify-center opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-3">
                       {iconDetails[iconName]?.icon}
                     </div>
                     <span
-                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full 
-              text-sm bg-gray-700 text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute inset-0 flex items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-full 
+              text-sm w-full h-full bg-gray-900 bg-opacity-90 text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
                     >
                       {iconDetails[iconName]?.name}
                     </span>

@@ -48,14 +48,14 @@ const About = () => {
         {iconDetails.map((detail, index) => (
           <div key={index} className="group relative">
             <div
-              className="-inset-1 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
-            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4 bg-opacity-50"
+              className="relative p-2 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full shadow-lg flex items-center justify-center
+            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4"
             >
               {detail.icon}
             </div>
             <span
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full 
-              text-sm bg-gray-700 text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="absolute inset-0 flex items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-full 
+              text-sm w-full h-full bg-gray-900 text-white p-1 rounded bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
             >
               {detail.name}
             </span>
@@ -68,18 +68,18 @@ const About = () => {
           {iconDetails.map((detail, index) => (
             <div key={index} className="group relative">
               <div
-              className="-inset-1 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full
-            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4 bg-opacity-50"
-            >
-              {detail.icon}
+                className="relative p-2 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full shadow-lg flex items-center justify-center
+            bg-blur opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg rounded-full p-4"
+              >
+                {detail.icon}
+              </div>
+              <span
+                className="absolute inset-0 flex items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-full 
+              text-sm w-full h-full bg-gray-900 text-white p-1 rounded bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              >
+                {detail.name}
+              </span>
             </div>
-            <span
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full 
-              text-sm bg-gray-700 text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              {detail.name}
-            </span>
-          </div>
           ))}
         </div>
       </div>

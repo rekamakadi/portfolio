@@ -5,9 +5,9 @@
       "title": "OFFEROASIS",
       "description": "ASP.NET API with an MSSQL database and a CI/CD workflow added via GitHub Actions. Imitates the operation of a webshop.",
       "links": {
-        "site": "XXX",
+        "site": "",
         "github": "https://github.com/balazs-oltvolgyi/CodeCoolElProjecteGrande",
-        "figma": "XXX"
+        "figma": ""
       },
       "techIcons": ["DiHtml5", "DiCss3", "DiReact", "BiLogoTailwindCss", "DiDocker", "DiMsqlServer", "DiGithubBadge", "DiDocker", "SiDotnet", "SiCsharp"]
     }
