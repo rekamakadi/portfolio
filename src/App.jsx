@@ -1,4 +1,3 @@
-import { DiHeroku } from "react-icons/di"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import About from "./components/About"

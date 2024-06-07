@@ -10,6 +10,19 @@
         "figma": ""
       },
       "techIcons": ["DiHtml5", "DiCss3", "DiReact", "BiLogoTailwindCss", "DiDocker", "DiMsqlServer", "DiGithubBadge", "DiDocker", "SiDotnet", "SiCsharp"]
+    },
+
+    {
+      "img": "/portfolio/images/funwithflags.png",
+      "experience": "UX/UI",
+      "title": "FUN WITH FLAGS",
+      "description": "UX/UI design project for a quiz game. Collaboration with the frontend developer team of the application. \n(Username: A; Password: a)",
+      "links": {
+        "site": "http://fwf-frontend.s3-website.eu-west-2.amazonaws.com/",
+        "github": "",
+        "figma": "https://www.figma.com/file/ftdDAgepDFx6P2WxXUOTLV/Fun-with-Flags?type=design&node-id=0-1&mode=design&t=IUnESgfgMcaNmtrr-0"
+      },
+      "techIcons": ["SiFigma", "DiCss3"]
     }
     
   ]

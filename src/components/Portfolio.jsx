@@ -3,7 +3,6 @@ import { AiFillGithub } from "react-icons/ai";
 import ShinyEffect from "./ShinyEffect";
 import projectsData from "../assets/projects.json";
 import Slider from "react-slick";
-import { CustomPrevArrow, CustomNextArrow } from "./CustomArrows"; // Import custom arrows
 
 import {
   DiJavascript1,
@@ -80,8 +79,6 @@ const Portfolio = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
   };
 
   return (
@@ -107,8 +104,10 @@ const Portfolio = () => {
                 )}
               </div>
 
-              <p className="text-gray-200 my-4 text-center">
-                {project.description}
+              <p className="text-gray-200 my-4 text-center"
+              dangerouslySetInnerHTML={{
+                __html: project.description.replace(/\n/g, "<br />"),
+              }}>
               </p>
               <div className="p-2 flex flex-wrap gap-2 text-2xl justify-center">
                 {project.techIcons.map((iconName, index) => (
