@@ -104,11 +104,12 @@ const Portfolio = () => {
                 )}
               </div>
 
-              <p className="text-gray-200 my-4 text-center"
-              dangerouslySetInnerHTML={{
-                __html: project.description.replace(/\n/g, "<br />"),
-              }}>
-              </p>
+              <p
+                className="text-gray-200 my-4 text-center"
+                dangerouslySetInnerHTML={{
+                  __html: project.description.replace(/\n/g, "<br />"),
+                }}
+              ></p>
               <div className="p-2 flex flex-wrap gap-2 text-2xl justify-center">
                 {project.techIcons.map((iconName, index) => (
                   <div key={index} className="group relative">
@@ -129,7 +130,9 @@ const Portfolio = () => {
                 {project.links.site && (
                   <a
                     href={project.links.site}
-                    className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:scale-105 hover:bg-slate-700 transition duration-300"
                   >
                     View Site
                   </a>
@@ -137,7 +140,9 @@ const Portfolio = () => {
                 {project.links.github && (
                   <a
                     href={project.links.github}
-                    className="px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:scale-105 hover:bg-gray-600 transition duration-300"
                   >
                     <AiFillGithub />
                   </a>
@@ -145,7 +150,9 @@ const Portfolio = () => {
                 {project.links.figma && (
                   <a
                     href={project.links.figma}
-                    className="px-4 py-2 bg-pink-500 text-gray-200 text-2xl rounded-lg hover:bg-pink-600 transition duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-pink-500 text-gray-200 text-2xl rounded-lg hover:scale-105 hover:bg-pink-600 transition duration-300"
                   >
                     <SiFigma />
                   </a>
