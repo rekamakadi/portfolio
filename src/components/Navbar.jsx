@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const underlineEffectStyle = `absolute bottom-0 left-0 w-full h-1 bg-purple-600 transform scale-x-0 group-hover:scale-x-100
+                transition-transform duration-300 ease-in-out`;
 
   const toggleNav = () => {
     setNav(!nav);
@@ -14,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-[#232323] z-50 flex text-2x1 justify-between text-gray-200 items-center px-12 w-full mx-auto h-12">
+    <div className="fixed top-0 left-0 right-0 bg-[#232323] z-50 flex justify-between text-2xl text-gray-200 items-center px-6 md:px-12 w-full h-16">
       <a href="">Réka Makádi</a>
 
       <ul className="hidden md:flex gap-12 z-10 cursor-pointer">
@@ -23,8 +25,7 @@ const Navbar = () => {
             About
           </Link>
           <span
-            className="absolute bottom-0 left-0 w-full h-1 bg-purple-600 transform scale-x-0 group-hover:scale-x-100
-                transition-transform duration-300 ease-in-out"
+            className={underlineEffectStyle}
           ></span>
         </li>
         <li className="relative group">
@@ -32,8 +33,7 @@ const Navbar = () => {
             Portfolio
           </Link>
           <span
-            className="absolute bottom-0 left-0 w-full h-1 bg-purple-600 transform scale-x-0 group-hover:scale-x-100
-                transition-transform duration-300 ease-in-out"
+            className={underlineEffectStyle}
           ></span>
         </li>
         <li className="relative group">
@@ -41,8 +41,7 @@ const Navbar = () => {
             Contact
           </Link>
           <span
-            className="absolute bottom-0 left-0 w-full h-1 bg-purple-600 transform scale-x-0 group-hover:scale-x-100
-                transition-transform duration-300 ease-in-out"
+            className={underlineEffectStyle}
           ></span>
         </li>
       </ul>

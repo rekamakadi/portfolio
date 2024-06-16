@@ -5,7 +5,7 @@ import ShinyEffect from "./ShinyEffect";
 
 const Hero = () => {
   return (
-    <div className="grid md:grid-cols-2 place-items-center max-w-[1250px] mx-auto mb-8 md:mb-32 mt-14">
+    <div className="grid md:grid-cols-2 place-items-center max-w-[1300px] mx-auto mb-8 md:mb-32 mt-14">
       <div className="max-w-[800px]">
         <p className="text-gray-200 md:text-6xl text-3xl min-w-[600px] tracking-tight">
           HEY, I Am <br />
