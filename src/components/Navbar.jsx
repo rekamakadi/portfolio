@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 bg-[#232323] z-50 flex justify-between text-2xl text-gray-200 items-center px-6 md:px-12 w-full h-16">
-      <a href="">Réka Makádi</a>
+      <a href="">RM</a>
 
       <ul className="hidden md:flex gap-12 z-10 cursor-pointer">
         <li className="relative group">
