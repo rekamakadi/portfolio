@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const { name, email, message } = formData;
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    setIsFormValid(name !== "" && isEmailValid && message !== "");
+  }, [formData]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <div
       className="px-6 max-w-[1000px] mx-auto glass grid md:grid-cols-2 place-items-center"
@@ -42,29 +64,38 @@ const Contact = () => {
           id="name"
           placeholder="Your Name ..."
           name="name"
+          value={formData.name}
+          onChange={handleChange}
           className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
+          required
         />
         <input
-          type="text"
+          type="email"
           id="email"
           placeholder="Your Email ..."
           name="email"
+          value={formData.email}
+          onChange={handleChange}
           className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+          required
         />
         <textarea
-          name="textarea"
+          name="message"
           id="textarea"
           cols="30"
           rows="4"
           placeholder="Your Message ..."
+          value={formData.message}
+          onChange={handleChange}
           className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
+          required
         />
 
         <button
           type="submit"
-          className="w-full transform transition-transform hover:scale-105 hover:shadow-lg
-                z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2
-                bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl"
+          className={`w-full transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 mt-6 p-2 bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl ${!isFormValid ? "opacity-50 cursor-not-allowed" : ""}`}
+          disabled={!isFormValid}
         >
           Send Message
         </button>
