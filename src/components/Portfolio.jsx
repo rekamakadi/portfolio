@@ -91,26 +91,17 @@ const Portfolio = () => {
               <h2 className="text-4xl text-white mb-2 text-center">
                 {project.experience}
               </h2>
-              <h4 className="text-xl text-white mb-2 text-center">
+              <h4 className="text-xl text-white mb-2 text-center underline">
                 {project.title}
               </h4>
-              <div className="w-full h-80 mb-4">
-                {project.img && (
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                )}
-              </div>
 
               <p
-                className="text-gray-200 my-4 text-center"
+                className="text-gray-200 m-4 text-center"
                 dangerouslySetInnerHTML={{
                   __html: project.description.replace(/\n/g, "<br />"),
                 }}
               ></p>
-              <div className="p-2 flex flex-wrap gap-2 text-2xl justify-center">
+              <div className="p-2 flex flex-wrap gap-2 text-2xl justify-center m-4">
                 {project.techIcons.map((iconName, index) => (
                   <div key={index} className="group relative">
                     <div className="relative p-2 bg-gradient-to-r from-teal-100 to-purple-300 rounded-full shadow-lg flex items-center justify-center opacity-70 hover:opacity-100 transition duration-300 backdrop-filter backdrop-blur-lg p-3">
@@ -121,6 +112,17 @@ const Portfolio = () => {
                     </span>
                   </div>
                 ))}
+
+                <div className="w-full h-80 my-4">
+                  {project.img && (
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  )}
+                </div>
+
                 <ShinyEffect right={-50} bottom={-50} size={200} />
               </div>
               <div className="flex space-x-4 justify-center mt-4">

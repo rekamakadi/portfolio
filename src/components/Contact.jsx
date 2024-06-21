@@ -24,6 +24,32 @@ const Contact = () => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://getform.io/f/lajklvob", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          // Handle error
+          console.error("Form submission error");
+        }
+      })
+      .catch((error) => {
+        console.error("Form submission error", error);
+      });
+  };
+
   return (
     <div
       className="px-6 max-w-[1000px] mx-auto glass grid md:grid-cols-2 place-items-center"
@@ -53,12 +79,7 @@ const Contact = () => {
           </a>
         </li>
       </ul>
-      <form
-        action="https://getform.io/f/lajklvob"
-        method="POST"
-        className="max-w-6xl p-5 md:p-12"
-        id="form"
-      >
+      <form onSubmit={handleSubmit} className="max-w-6xl p-5 md:p-12" id="form">
         <input
           type="text"
           id="name"
@@ -94,7 +115,9 @@ const Contact = () => {
 
         <button
           type="submit"
-          className={`w-full transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 mt-6 p-2 bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl ${!isFormValid ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`w-full transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 mt-6 p-2 bg-gradient-to-r from-[#9333ea] via-[#DE7AFF] to-[#61BAAD] rounded-xl ${
+            !isFormValid ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           disabled={!isFormValid}
         >
           Send Message
