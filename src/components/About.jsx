@@ -43,7 +43,14 @@ const About = () => {
       className="max-w-[1300px] mx-auto p-6 grid md:grid-cols-2 gap-8 place-items-center"
       id="about"
     >
-      <h2 className="text-gray-200 text-3xl font-bold mb-4">Tech skills</h2>
+      <p className="text-gray-300 mb-6">
+        I am passionate about tailoring solutions to meet customer requirements
+        and desires, ensuring their vision comes to life. What I enjoy most is
+        exploring different perspectives and presenting alternative approaches,
+        ultimately selecting the most fitting and effective solution. My goal is
+        to combine customer satisfaction with innovative problem-solving.
+      </p>
+
       <div className="md:hidden p-6 flex flex-wrap gap-4 text-4xl justify-center">
         {iconDetails.map((detail, index) => (
           <div key={index} className="group relative">
