@@ -43,7 +43,7 @@ const About = () => {
       className="max-w-[1300px] mx-auto p-6 grid md:grid-cols-2 gap-8 place-items-center"
       id="about"
     >
-      <p className="text-gray-300 mb-6">
+      <p className="text-gray-300 mb-6 text-center">
         I am passionate about tailoring solutions to meet customer requirements
         and desires, ensuring their vision comes to life. What I enjoy most is
         exploring different perspectives and presenting alternative approaches,
