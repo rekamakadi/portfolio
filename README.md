@@ -17,7 +17,7 @@
 - [License](#license)
 
 ## Overview
-![Project Screenshot](/portfolio/images/portfolio.png)
+![Project Screenshot](./public/images/portfolio.png)
 
 This is my personal portfolio website showcasing my projects, built with **React**, **Vite**, **Tailwind CSS**, and deployed using **GitHub Pages**. It includes a dynamic project slider, animated tech icons, and modern UI effects.
 
