@@ -19,6 +19,8 @@ import {
 } from "react-icons/di";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { SiDotnet, SiCsharp, SiFigma } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
+
 
 const iconDetails = {
   DiHtml5: { icon: <DiHtml5 className="text-[#E34F26]" />, name: "HTML5" },
@@ -60,6 +62,8 @@ const iconDetails = {
   SiDotnet: { icon: <SiDotnet className="text-[#512BD4]" />, name: ".NET" },
   SiCsharp: { icon: <SiCsharp className="text-[#239120]" />, name: "C#" },
   SiFigma: { icon: <SiFigma className="text-[#F24E1E]" />, name: "Figma" },
+  TbBrandThreejs: { icon: <TbBrandThreejs className="text-[#7267F2]" />, name: "Three.js" },
+
 };
 
 const Portfolio = () => {

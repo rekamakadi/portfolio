@@ -1,28 +1,53 @@
 [
-    {
-      "img": "/portfolio/images/offeroasis.png",
-      "experience": "FULL STACK",
-      "title": "OFFEROASIS",
-      "description": "ASP.NET API with an MSSQL database and a CI/CD workflow added via GitHub Actions. Imitates the operation of a webshop.",
-      "links": {
-        "site": "",
-        "github": "https://github.com/balazs-oltvolgyi/CodeCoolElProjecteGrande",
-        "figma": ""
-      },
-      "techIcons": ["DiHtml5", "DiCss3", "DiReact", "BiLogoTailwindCss", "DiDocker", "DiMsqlServer", "DiGithubBadge", "DiDocker", "SiDotnet", "SiCsharp"]
+  {
+    "img": "/portfolio/images/spheredicevisuals.png",
+    "experience": "FRONTEND",
+    "title": "SPHERE DICE VISUALS",
+    "description": "Service page for a digital agency built with React and features 3D visual elements using Three.js.",
+    "links": {
+      "site": "https://rekamakadi.github.io/service-page/",
+      "github": "https://github.com/rekamakadi/service-page",
+      "figma": ""
     },
+    "techIcons": ["DiHtml5", "DiCss3", "DiReact", "DiGithubBadge", "TbBrandThreejs", "DiBootstrap"]
+  },
 
-    {
-      "img": "/portfolio/images/funwithflags.png",
-      "experience": "UX/UI",
-      "title": "FUN WITH FLAGS",
-      "description": "UX/UI design project for a quiz game. Worked closely with the frontend developer team on the application. \n(Username: A; Password: a)",
-      "links": {
-        "site": "http://fwf-frontend.s3-website.eu-west-2.amazonaws.com/",
-        "github": "https://github.com/FoldiKrizsanIldiko/FunFlags",
-        "figma": "https://www.figma.com/file/ftdDAgepDFx6P2WxXUOTLV/Fun-with-Flags?type=design&node-id=0-1&mode=design&t=IUnESgfgMcaNmtrr-0"
-      },
-      "techIcons": ["SiFigma", "DiCss3"]
-    }
-    
-  ]
+  {
+    "img": "/portfolio/images/portfolio.png",
+    "experience": "FRONTEND",
+    "title": "PORTFOLIO",
+    "description": "Personal portfolio project built using React, styled with Tailwind CSS, and powered by Vite. Featuring animations using `react-type-animation` and interactive UI components such as carousels with `react-slick`.",
+    "links": {
+      "site": "https://rekamakadi.github.io/portfolio/",
+      "github": "https://github.com/rekamakadi/portfolio",
+      "figma": ""
+    },
+    "techIcons": ["DiHtml5", "DiCss3", "DiReact", "BiLogoTailwindCss", "DiGithubBadge"]
+  },
+
+  {
+    "img": "/portfolio/images/offeroasis.png",
+    "experience": "FULL STACK",
+    "title": "OFFEROASIS",
+    "description": "ASP.NET API with an MSSQL database and a CI/CD workflow added via GitHub Actions. Imitates the operation of a webshop.",
+    "links": {
+      "site": "",
+      "github": "https://github.com/balazs-oltvolgyi/CodeCoolElProjecteGrande",
+      "figma": ""
+    },
+    "techIcons": ["DiHtml5", "DiCss3", "DiReact", "BiLogoTailwindCss", "DiDocker", "DiMsqlServer", "DiGithubBadge", "DiDocker", "SiDotnet", "SiCsharp"]
+  },
+
+  {
+    "img": "/portfolio/images/funwithflags.png",
+    "experience": "UX/UI",
+    "title": "FUN WITH FLAGS",
+    "description": "UX/UI design project for a quiz game. Worked closely with the frontend developer team on the application. \n(Username: A; Password: a)",
+    "links": {
+      "site": "http://fwf-frontend.s3-website.eu-west-2.amazonaws.com/",
+      "github": "https://github.com/FoldiKrizsanIldiko/FunFlags",
+      "figma": "https://www.figma.com/file/ftdDAgepDFx6P2WxXUOTLV/Fun-with-Flags?type=design&node-id=0-1&mode=design&t=IUnESgfgMcaNmtrr-0"
+    },
+    "techIcons": ["SiFigma", "DiCss3"]
+  }
+]
